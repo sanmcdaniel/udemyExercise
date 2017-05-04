@@ -1,12 +1,12 @@
 package linkedListExercise;
 
 public class Song {
-	String songTitle;
-	int songDurationInSecond;
+	private String songTitle;
+	private double songDuration;
 	
-	public Song(String songTitle, int songDurationInSecond) {
+	public Song(String songTitle, double songDuration) {
 		this.songTitle = songTitle;
-		this.songDurationInSecond = songDurationInSecond;
+		this.songDuration = songDuration;
 	}
 
 	public String getSongTitle() {
@@ -17,12 +17,16 @@ public class Song {
 		this.songTitle = songTitle;
 	}
 
-	public int getSongDurationInSecond() {
-		return songDurationInSecond;
+	public double getSongDurationInSecond() {
+		return songDuration;
 	}
 
 	public void setSongDurationInSecond(int songDurationInSecond) {
-		this.songDurationInSecond = songDurationInSecond;
+		this.songDuration = songDurationInSecond;
 	}
 
+	@Override
+	public String toString() {
+		return "Title: " + songTitle + ", Duration: " + songDuration + "\n";
+	}
 }
